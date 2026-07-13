@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
 import CertificateCard from "../components/CertificateCard";
+import cert1 from "src/assets/Peter Paul R. Quintal_page-0001.jpg";
+import cert2 from "src/assets/UI_UX_CERT.png";
+import cert3 from "src/assets/CISCO-INTRO-TO-CYBERSEC-CERT_page-0001.jpg";
+import cert4 from "src/assets/sql_basic certificate_page-0001.jpg";
+import cert5 from "src/assets/Sonder 2025_ Google Dev World Tour in Vietnam - Peter Paul R. Quintal_page-0001.jpg";
+import cert6 from "src/assets/Peter-Paul-Roslin-Quintal_page-0001.jpg";
 
 const certificatesData = [
   {
@@ -8,7 +14,7 @@ const certificatesData = [
       "Real-Time Intelligence: Data Streaming and Stream Processing in AI Systems",
     issuer: "Mrs. Mae Ezra A. Bautista",
     date: "March 2026",
-    image: "src/assets/Peter Paul R. Quintal_page-0001.jpg",
+    image: cert1,
     link: "#",
   },
   {
@@ -16,7 +22,7 @@ const certificatesData = [
     title: "UI! UXpect the unexpected | UI/UX Workshop",
     issuer: "GDGoC | University of Immaculate Concepcion",
     date: "April 2025",
-    image: "src/assets/UI_UX_CERT.png",
+    image: cert2,
     link: "#",
   },
   {
@@ -24,7 +30,7 @@ const certificatesData = [
     title: "Introduction to Cybersecurity",
     issuer: "Cisco Networking Academy",
     date: "April 2025",
-    image: "src/assets/CISCO-INTRO-TO-CYBERSEC-CERT_page-0001.jpg",
+    image: cert3,
     link: "#",
   },
   {
@@ -32,7 +38,7 @@ const certificatesData = [
     title: "SQL (Basic)",
     issuer: "HackerRank",
     date: "April 2025",
-    image: "src/assets/sql_basic certificate_page-0001.jpg",
+    image: cert4,
     link: "#",
   },
   {
@@ -40,8 +46,7 @@ const certificatesData = [
     title: "Sonder 2025: Google Dev World Tour in Vietnam",
     issuer: "GDGoC",
     date: "February 2025",
-    image:
-      "src/assets/Sonder 2025_ Google Dev World Tour in Vietnam - Peter Paul R. Quintal_page-0001.jpg",
+    image: cert5,
     link: "#",
   },
   {
@@ -50,7 +55,7 @@ const certificatesData = [
       "Microsoft Office Specialist: Excel Associate Certification Training Program",
     issuer: "Data Analytics Philippines",
     date: "Febuary 2025",
-    image: "src/assets/Peter-Paul-Roslin-Quintal_page-0001.jpg",
+    image: cert6,
     link: "#",
   },
 ];
