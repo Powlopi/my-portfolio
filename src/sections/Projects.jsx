@@ -8,7 +8,7 @@ const projectsData = [
     title: "E-Commerce Dashboard",
     description:
       "A comprehensive admin dashboard for managing products, orders, and customer data with real-time analytics.",
-    image: "https://placehold.co/600x400/1E293B/38BDF8?text=Project+1",
+    image: "",
     tech: ["React", "Tailwind CSS", "Recharts", "Node.js"],
     github: "https://github.com/",
     live: "https://example.com/",

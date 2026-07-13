@@ -5,34 +5,52 @@ const certificatesData = [
   {
     id: 1,
     title:
-      "Microsoft Office Specialist: Excel Associate Certification Training Program",
-    issuer: "Data Analytics Philippines",
-    date: "Febuary 2025",
-    image: "https://placehold.co/600x400/1e1e2e/a6accd?text=Meta+Certificate",
+      "Real-Time Intelligence: Data Streaming and Stream Processing in AI Systems",
+    issuer: "Mrs. Mae Ezra A. Bautista",
+    date: "March 2026",
+    image: "src\\assets\\Peter Paul R. Quintal_page-0001.jpg",
     link: "#",
   },
   {
     id: 2,
-    title: "Introduction to Cybersecurity",
-    issuer: "Cisco Networking Academy",
-    date: "April 2025",
-    image: "https://placehold.co/600x400/1e1e2e/a6accd?text=Responsive+Design",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "SQL (Basic)",
-    issuer: "HackerRank",
-    date: "April 2025",
-    image: "https://placehold.co/600x400/1e1e2e/a6accd?text=JS+Algorithms",
-    link: "#",
-  },
-  {
-    id: 4,
     title: "UI! UXpect the unexpected | UI/UX Workshop",
     issuer: "GDGoC | University of Immaculate Concepcion",
     date: "April 2025",
     image: "src/assets/UI_UX_CERT.png",
+    link: "#",
+  },
+  {
+    id: 3,
+    title: "Introduction to Cybersecurity",
+    issuer: "Cisco Networking Academy",
+    date: "April 2025",
+    image: "src\\assets\\CISCO-INTRO-TO-CYBERSEC-CERT_page-0001.jpg",
+    link: "#",
+  },
+  {
+    id: 4,
+    title: "SQL (Basic)",
+    issuer: "HackerRank",
+    date: "April 2025",
+    image: "src\\assets\\sql_basic certificate_page-0001.jpg",
+    link: "#",
+  },
+  {
+    id: 5,
+    title: "Sonder 2025: Google Dev World Tour in Vietnam",
+    issuer: "GDGoC",
+    date: "February 2025",
+    image:
+      "src\\assets\\Sonder 2025_ Google Dev World Tour in Vietnam - Peter Paul R. Quintal_page-0001.jpg",
+    link: "#",
+  },
+  {
+    id: 6,
+    title:
+      "Microsoft Office Specialist: Excel Associate Certification Training Program",
+    issuer: "Data Analytics Philippines",
+    date: "Febuary 2025",
+    image: "src\\assets\\Peter-Paul-Roslin-Quintal_page-0001.jpg",
     link: "#",
   },
 ];
@@ -57,7 +75,6 @@ const Certificates = () => {
 
       {/* Main content wrapped in z-10 */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
-        {/* ... The rest of your Certificates content ... */}
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

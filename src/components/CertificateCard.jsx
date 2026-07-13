@@ -20,7 +20,7 @@ const CertificateCard = ({ title, issuer, date, image, link }) => {
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+          className="w-fit h-fit object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
         />
         <div className="absolute inset-0 bg-dark-300/30 group-hover:bg-transparent transition-colors duration-300"></div>
 
