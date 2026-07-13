@@ -48,7 +48,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-5xl md:text-6xl font-bold text-white tracking-tight"
           >
-            Peter Paul Quintal
+            Peter Paul R. Quintal
           </motion.h1>
 
           <motion.h2
