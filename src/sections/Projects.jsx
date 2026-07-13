@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
-import thesisImage from "public\Screenshot 2026-07-13 114955.png";
 
 // Mock data based on your requirements
 const projectsData = [
@@ -9,7 +8,7 @@ const projectsData = [
     title: "Web-Based Golden Apple Snail (Kuhol) Detection",
     description:
       "A web application that uses YOLOv11 to detect Golden Apple Snail (Kuhol) egg clusters and visualize their locations through an interactive geospatial map.",
-    image: thesisImage,
+    image: "public/Screenshot 2026-07-13 114955.png",
     badges: ["Capstone Thesis", "Group Project", "Completed"],
     tech: [
       "React",
