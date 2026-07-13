@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Our premium dark mode palette */
+  --color-dark-100: #1e293b;
+  --color-dark-200: #111827;
+  --color-dark-300: #0f172a;
+
+  /* Our accent colors */
+  --color-accent: #38bdf8;
+  --color-accent-hover: #0284c7;
+
+  /* Setting Inter as our default sans font */
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    /* Using the variables we just created */
+    background-color: var(--color-dark-300);
+    color: var(--color-gray-300);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: white;
+  }
+}
