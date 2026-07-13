@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
-import thesisImage from "public/Screenshot 2026-07-13 114955.png";
+import thesisImage from "public\Screenshot 2026-07-13 114955.png";
 
 // Mock data based on your requirements
 const projectsData = [
