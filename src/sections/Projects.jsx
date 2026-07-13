@@ -67,7 +67,7 @@ const Projects = () => {
           </h2>
           <div className="w-20 h-1 bg-accent rounded-full mb-6"></div>
 
-          <p className="text-gray-400 max-w-2xl leading-relaxed">
+          <p className="text-gray-400 max-w-xl leading-relaxed">
             A selection of my recent work, showcasing frontend architecture,
             responsive design, and integration with modern web technologies.
           </p>

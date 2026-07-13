@@ -39,28 +39,28 @@ const Hero = () => {
         >
           <motion.p
             variants={itemVariants}
-            className="text-accent font-medium tracking-wide text-2xl"
+            className="text-accent font-medium tracking-wide text-xl"
           >
             Hi there, my name is
           </motion.p>
 
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-7xl font-bold text-white tracking-tight"
+            className="text-5xl md:text-6xl font-bold text-white tracking-tight"
           >
             Peter Paul Quintal
           </motion.h1>
 
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-4xl font-bold text-gray-400 tracking-tight"
+            className="text-4xl md:text-3xl font-bold text-gray-400 tracking-tight"
           >
             I build things for the web.
           </motion.h2>
 
           <motion.p
             variants={itemVariants}
-            className="max-w-lg text-gray-400 text-xl leading-relaxed pt-4 text-justify"
+            className="max-w-lg text-gray-400 text-lg leading-relaxed pt-4 text-justify"
           >
             I'm a Computer Science Graduate and Frontend Developer specializing
             in building exceptional digital experiences. Currently, I'm focused
@@ -96,11 +96,11 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           className="relative hidden md:flex justify-center"
         >
-          <div className="w-100 h-100 rounded-2xl border border-dark-100 bg-dark-200/50 backdrop-blur-sm shadow-2xl overflow-hidden group">
+          <div className="w-80 h-100 rounded-2xl border border-dark-100 bg-dark-200/50 backdrop-blur-sm shadow-2xl overflow-hidden group">
             <img
               src={profile}
               alt="Peter Paul Quintal"
-              className="w-100 h-120 object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-80 h-110 object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>
         </motion.div>

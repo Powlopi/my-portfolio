@@ -34,7 +34,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <a href="#home" className="text-4xl font-bold text-white tracking-wide">
+        <a href="#home" className="text-3xl font-bold text-white tracking-wide">
           Dev<span className="text-accent">.</span>
         </a>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-300 hover:text-accent transition-colors duration-300 text-lg font-medium"
+              className="text-gray-300 hover:text-accent transition-colors duration-300 text-md font-medium"
             >
               {link.name}
             </a>

@@ -62,7 +62,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6 text-gray-400 text-xl leading-relaxed text-justify"
+            className="space-y-6 text-gray-400 text-lg leading-relaxed text-justify"
           >
             <p>
               Hello! I'm Peter Paul, a developer who enjoys creating things that

@@ -207,7 +207,7 @@ const Skills = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-dark-200/50 border border-dark-100 rounded-2xl p-6 hover:border-dark-100/80 hover:bg-dark-200 transition-all duration-300"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6 border-b border-dark-100 pb-4">
+              <h3 className="text-xl font-semibold text-white mb-6 border-b border-dark-100 pb-4">
                 {category.title}
               </h3>
 
@@ -215,7 +215,7 @@ const Skills = () => {
                 {category.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="text-xl flex items-center space-x-4 text-gray-400 group cursor-pointer"
+                    className="text-md flex items-center space-x-4 text-gray-400 group cursor-pointer"
                   >
                     <div className="p-2 bg-dark-300 rounded-lg group-hover:scale-110 transition-transform duration-300">
                       {skill.icon}
