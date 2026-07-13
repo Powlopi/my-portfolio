@@ -8,7 +8,7 @@ const projectsData = [
     title: "Web-Based Golden Apple Snail (Kuhol) Detection",
     description:
       "A web application that uses YOLOv11 to detect Golden Apple Snail (Kuhol) egg clusters and visualize their locations through an interactive geospatial map.",
-    image: "src\\assets\\Screenshot 2026-07-13 114955.png",
+    image: "src/assets/Screenshot 2026-07-13 114955.png",
     badges: ["Capstone Thesis", "Group Project", "Completed"],
     tech: [
       "React",
