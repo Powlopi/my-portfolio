@@ -8,6 +8,7 @@ const TimelineItem = ({
   description,
   type,
   isLast,
+  isLeft,
 }) => {
   const itemVariants = {
     hidden: { opacity: 0, x: -30 },
@@ -19,7 +20,9 @@ const TimelineItem = ({
   };
 
   return (
-    <div className="relative pl-8 md:pl-0">
+    <div
+      className={`relative flex flex-col md:flex-row items-center ${isLeft ? "md:justify-start" : "md:justify-end"}`}
+    >
       {/* Timeline Line & Dot (Desktop: Center, Mobile: Left) */}
       <div className="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-dark-100 -translate-x-1/2"></div>
 

@@ -6,14 +6,26 @@ import {
   FiFacebook,
   FiSend,
 } from "react-icons/fi";
+import { useState } from "react";
 
 const Contact = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    // This copies the text to the user's clipboard
+    navigator.clipboard.writeText("pprquintal@gmail.com");
+
+    // Briefly show a "Copied!" message
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
-    <section
-      id="contact"
-      className="py-24 relative border-t border-dark-100/50 bg-dark-300"
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
+    <section id="contact" className="py-24 relative">
+      {/* SECTION-SPECIFIC BLOBS */}
+      <div className="absolute top-30 left-1/2 -translate-x-1/2 w-150 h-150 bg-rose-500/10 rounded-full mix-blend-screen filter blur-[150px] animate-blob"></div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,22 +57,24 @@ const Contact = () => {
               Let's Connect
             </h3>
             <div className="flex flex-col gap-6">
-              <a
-                href="mailto:pprquintal@gmail.com"
-                className="flex items-center gap-4 text-gray-400 hover:text-accent transition-colors duration-300 group"
+              {/* 3. The updated Email Button */}
+              <button
+                onClick={handleCopyEmail}
+                className="flex items-center gap-4 w-fit text-gray-400 hover:text-accent transition-colors duration-300 group focus:outline-none"
               >
                 <div className="w-12 h-12 bg-dark-200 rounded-full flex items-center justify-center border border-dark-100 group-hover:border-accent/50 transition-colors">
                   <FiMail className="text-xl" />
                 </div>
                 <span className="font-medium text-lg">
-                  pprquintal@gmail.com
+                  {/* This swaps the text instantly when clicked */}
+                  {copied ? "Copied to clipboard! ✓" : "pprquintal@gmail.com"}
                 </span>
-              </a>
+              </button>
               <a
                 href="https://github.com/Powlopi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 text-gray-400 hover:text-accent transition-colors duration-300 group"
+                className="flex items-center gap-4 w-fit text-gray-400 hover:text-accent transition-colors duration-300 group"
               >
                 <div className="w-12 h-12 bg-dark-200 rounded-full flex items-center justify-center border border-dark-100 group-hover:border-accent/50 transition-colors">
                   <FiGithub className="text-xl" />
@@ -71,7 +85,7 @@ const Contact = () => {
                 href="https://linkedin.com/in/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 text-gray-400 hover:text-accent transition-colors duration-300 group"
+                className="flex items-center gap-4 w-fit text-gray-400 hover:text-accent transition-colors duration-300 group"
               >
                 <div className="w-12 h-12 bg-dark-200 rounded-full flex items-center justify-center border border-dark-100 group-hover:border-accent/50 transition-colors">
                   <FiLinkedin className="text-xl" />
@@ -84,7 +98,7 @@ const Contact = () => {
                 href="https://www.facebook.com/powlopi15/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 text-gray-400 hover:text-accent transition-colors duration-300 group"
+                className="flex items-center gap-4 w-fit text-gray-400 hover:text-accent transition-colors duration-300 group"
               >
                 <div className="w-12 h-12 bg-dark-200 rounded-full flex items-center justify-center border border-dark-100 group-hover:border-accent/50 transition-colors">
                   <FiFacebook className="text-xl" />

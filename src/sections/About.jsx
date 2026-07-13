@@ -31,11 +31,16 @@ const About = () => {
   ];
 
   return (
-    <section
-      id="about"
-      className="py-24 bg-dark-200/50 border-t border-dark-100"
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="about" className="py-24 relative">
+      {/* SECTION-SPECIFIC BLOBS (Warm/Welcoming) */}
+      <div className="absolute top-40 right-0 w-80 h-80 bg-amber-500/15 rounded-full blur-[100px] animate-blob"></div>
+      <div
+        className="absolute bottom-10 -left-20 w-100 h-100 bg-rose-500/15 rounded-full blur-[120px] animate-blob"
+        style={{ animationDelay: "2s" }}
+      ></div>
+
+      {/* Main content wrapped in z-10 */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

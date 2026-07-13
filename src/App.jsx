@@ -7,13 +7,18 @@ import Experience from "./sections/Experience";
 import Certificates from "./sections/Certificates";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark-300 selection:bg-accent/30 selection:text-white">
-      <Navbar />
+    <div className="min-h-screen bg-dark-300 selection:bg-accent/30 selection:text-white relative overflow-x-hidden">
+      <CustomCursor />
 
-      <main>
+      <div className="relative z-50">
+        <Navbar />
+      </div>
+
+      <main className="relative z-10">
         <Hero />
         <About />
         <Skills />

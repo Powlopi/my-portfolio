@@ -42,11 +42,15 @@ const experienceData = [
 
 const Experience = () => {
   return (
-    <section
-      id="experience"
-      className="min-h-screen py-24 relative overflow-hidden"
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
+    <section id="experience" className="min-h-screen py-24 relative">
+      {/* SECTION-SPECIFIC BLOBS */}
+      <div className="absolute top-1/3 left-10 w-80 h-80 bg-emerald-500/15 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+      <div
+        className="absolute top-2/3 right-10 w-100 h-100 bg-indigo-600/15 rounded-full mix-blend-screen filter blur-[120px] animate-blob"
+        style={{ animationDelay: "3s" }}
+      ></div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,17 +72,25 @@ const Experience = () => {
 
         {/* Timeline Container */}
         <div className="relative mt-12 md:mt-20">
-          {experienceData.map((item, index) => (
-            <TimelineItem
-              key={item.id}
-              title={item.title}
-              organization={item.organization}
-              date={item.date}
-              description={item.description}
-              type={item.type}
-              isLast={index === experienceData.length - 1}
-            />
-          ))}
+          {/* ADDED: The central lines for the alternating layout */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-dark-100 -translate-x-1/2"></div>
+          <div className="block md:hidden absolute left-6 top-0 bottom-0 w-0.5 bg-dark-100"></div>
+
+          <div className="space-y-12">
+            {experienceData.map((item, index) => (
+              <TimelineItem
+                key={item.id}
+                title={item.title}
+                organization={item.organization}
+                date={item.date}
+                description={item.description}
+                type={item.type}
+                isLast={index === experienceData.length - 1}
+                /* ADDED: This prop tells the item which side to render on */
+                isLeft={index % 2 === 0}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

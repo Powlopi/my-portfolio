@@ -174,8 +174,16 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 bg-dark-300">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="skills" className="py-24 relative">
+      {/* SECTION-SPECIFIC BLOBS (Tech/Cyber) */}
+      <div className="absolute top-1/4 -left-10 w-96 h-96 bg-teal-500/15 rounded-full blur-[100px] animate-blob"></div>
+      <div
+        className="absolute bottom-1/4 -right-10 w-96 h-96 bg-cyan-500/15 rounded-full blur-[100px] animate-blob"
+        style={{ animationDelay: "3s" }}
+      ></div>
+
+      {/* Main content wrapped in z-10 */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

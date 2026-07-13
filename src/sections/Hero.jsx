@@ -78,7 +78,8 @@ const Hero = () => {
               View Projects <FiArrowRight />
             </a>
             <a
-              href="/resume.pdf"
+              href="/QUINTAL-RESUME.pdf"
+              download="Peter_Paul_Quintal_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-md hover:border-accent hover:text-accent transition-colors duration-300"

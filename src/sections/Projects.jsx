@@ -45,8 +45,16 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="min-h-screen py-24 bg-slate-900 relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
+    <section id="projects" className="min-h-screen py-24 relative">
+      {/* 2. SECTION-SPECIFIC BLOBS */}
+      <div className="absolute top-20 -right-20 w-96 h-96 bg-purple-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+      <div
+        className="absolute bottom-30 -left-20 w-125 h-125 bg-sky-600/20 rounded-full mix-blend-screen filter blur-[120px] animate-blob"
+        style={{ animationDelay: "2s" }}
+      ></div>
+
+      {/* 3. Added relative z-10 to the container */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

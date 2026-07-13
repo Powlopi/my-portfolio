@@ -48,7 +48,16 @@ const Certificates = () => {
 
   return (
     <section id="certificates" className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
+      {/* SECTION-SPECIFIC BLOBS (Achievement/Premium) */}
+      <div className="absolute top-20 left-1/12 w-125 h-125 bg-fuchsia-600/15 rounded-full blur-[120px] animate-blob"></div>
+      <div
+        className="absolute bottom-40 right-1/12 w-100 h-100 bg-yellow-500/10 rounded-full blur-[100px] animate-blob"
+        style={{ animationDelay: "4s" }}
+      ></div>
+
+      {/* Main content wrapped in z-10 */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
+        {/* ... The rest of your Certificates content ... */}
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
