@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import CertificateCard from "../components/CertificateCard";
-import cert1 from "src/assets/Peter Paul R. Quintal_page-0001.jpg";
-import cert2 from "src/assets/UI_UX_CERT.png";
-import cert3 from "src/assets/CISCO-INTRO-TO-CYBERSEC-CERT_page-0001.jpg";
-import cert4 from "src/assets/sql_basic certificate_page-0001.jpg";
-import cert5 from "src/assets/Sonder 2025_ Google Dev World Tour in Vietnam - Peter Paul R. Quintal_page-0001.jpg";
-import cert6 from "src/assets/Peter-Paul-Roslin-Quintal_page-0001.jpg";
+import cert1 from "../assets/Peter Paul R. Quintal_page-0001.jpg";
+import cert2 from "../assets/UI_UX_CERT.png";
+import cert3 from "../assets/CISCO-INTRO-TO-CYBERSEC-CERT_page-0001.jpg";
+import cert4 from "../assets/sql_basic certificate_page-0001.jpg";
+import cert5 from "../assets/Sonder 2025_ Google Dev World Tour in Vietnam - Peter Paul R. Quintal_page-0001.jpg";
+import cert6 from "../assets/Peter-Paul-Roslin-Quintal_page-0001.jpg";
 
 const certificatesData = [
   {
