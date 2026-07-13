@@ -54,26 +54,69 @@ const ProjectCard = ({
   return (
     <motion.div
       variants={cardVariants}
-      className="group flex flex-col bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl overflow-hidden hover:-translate-y-2 hover:border-sky-400/50 transition-all duration-300 shadow-lg"
+      className="
+group
+relative
+flex
+flex-col
+h-full
+overflow-hidden
+rounded-3xl
+border
+border-slate-700/60
+bg-slate-900/60
+backdrop-blur-xl
+shadow-lg
+transition-all
+duration-500
+hover:-translate-y-3
+hover:border-sky-400/40
+hover:shadow-[0_0_35px_rgba(56,189,248,0.18)]
+"
     >
       {/* Screenshot Placeholder */}
-      <div className="w-full h-56 overflow-hidden relative bg-slate-800">
+      <div className="relative h-60 overflow-hidden bg-slate-900">
         <img
           src={image}
-          alt={`Screenshot of ${title}`}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+          alt={title}
+          className="
+    w-full
+    h-full
+    object-cover
+    transition-transform
+    duration-700
+    group-hover:scale-110
+"
         />
-        {/* Subtle overlay */}
-        <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-colors duration-300"></div>
+        {/* Dark Gradient */}
+        <div className="absolute inset-0 bg-sky-400/5 opacity-50 group-hover:opacity-0 transition-opacity duration-500"></div>
+
+        {/* Hover Glow */}
+        <div className="absolute inset-0 bg-sky-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col grow">
-        <h3 className="text-2xl font-bold text-gray-100 mb-3 group-hover:text-sky-400 transition-colors duration-300">
+      <div className="flex flex-col flex-1 p-7">
+        <h3
+          className="
+    text-2xl
+    font-bold
+    tracking-tight
+    text-white
+    min-h-24
+    mb-3
+    transition-colors
+    duration-300
+    group-hover:text-sky-400
+    flex
+    items-start
+"
+        >
           {title}
         </h3>
+
         {badges && (
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap content-start gap-2 mb-5 min-h-15">
             {badges.map((badge, index) => (
               <span
                 key={index}
@@ -89,7 +132,18 @@ const ProjectCard = ({
           </div>
         )}
 
-        <p className="text-gray-400 text-sm leading-relaxed mb-6 grow">
+        <div className="my-5 h-px bg-linear-to-r from-transparent via-slate-700 to-transparent"></div>
+
+        <p
+          className="
+    text-slate-400
+    text-sm
+    leading-7
+    min-h-30
+    mb-6
+    text-justify
+"
+        >
           {description}
         </p>
 
@@ -98,7 +152,22 @@ const ProjectCard = ({
           {tech.map((item, index) => (
             <li
               key={index}
-              className="text-sky-400 text-xs font-mono bg-sky-400/10 px-3 py-1 rounded-full border border-sky-400/20"
+              className="
+px-3
+py-1
+rounded-full
+text-xs
+font-medium
+border
+border-slate-700
+bg-slate-800
+text-slate-300
+transition-all
+duration-300
+hover:border-sky-400/50
+hover:bg-sky-500/10
+hover:text-sky-300
+"
             >
               {item}
             </li>
@@ -106,27 +175,66 @@ const ProjectCard = ({
         </ul>
 
         {/* Action Buttons */}
-        <div className="flex gap-4 items-center mt-auto pt-4 border-t border-slate-700/50">
+        <div className="flex gap-3 mt-auto pt-6">
           {github && (
             <a
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-400 hover:text-sky-400 transition-colors duration-300 text-sm font-medium"
-              aria-label="View Source on GitHub"
+              className="
+        flex-1
+        flex
+        items-center
+        justify-center
+        gap-2
+        py-3
+        rounded-xl
+        border
+        border-slate-700
+        bg-slate-800
+        text-slate-300
+        text-sm
+        font-medium
+        transition-all
+        duration-300
+        hover:border-sky-400
+        hover:bg-sky-500/10
+        hover:text-sky-300
+      "
             >
-              <FiGithub className="text-lg" /> Code
+              <FiGithub />
+              GitHub
             </a>
           )}
+
           {live && (
             <a
               href={live}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gray-400 hover:text-sky-400 transition-colors duration-300 text-sm font-medium"
-              aria-label="View Live Demo"
+              className="
+        flex-1
+        flex
+        items-center
+        justify-center
+        gap-2
+        py-3
+        rounded-xl
+        border
+        border-slate-700
+        bg-slate-800
+        text-slate-300
+        text-sm
+        font-semibold
+        transition-all
+        duration-300
+        hover:border-sky-400
+        hover:bg-sky-500/10
+        hover:text-sky-300
+      "
             >
-              <FiExternalLink className="text-lg" /> Live Demo
+              <FiExternalLink />
+              Live Demo
             </a>
           )}
         </div>
