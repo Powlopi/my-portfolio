@@ -1,7 +1,18 @@
+import { FiUsers, FiCheckCircle, FiCode, FiBriefcase } from "react-icons/fi";
+import { FaGraduationCap } from "react-icons/fa";
+import { MdConstruction } from "react-icons/md";
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
-const ProjectCard = ({ title, description, image, tech, github, live }) => {
+const ProjectCard = ({
+  title,
+  description,
+  image,
+  tech,
+  github,
+  live,
+  badges,
+}) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -10,7 +21,36 @@ const ProjectCard = ({ title, description, image, tech, github, live }) => {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
+  const badgeColors = {
+    "Capstone Thesis":
+      "bg-purple-500/15 text-purple-300 border border-purple-500/30",
 
+    "Group Project":
+      "bg-indigo-500/15 text-indigo-300 border border-indigo-500/30",
+
+    "Personal Project": "bg-sky-500/15 text-sky-300 border border-sky-500/30",
+
+    "Client Project":
+      "bg-emerald-500/15 text-emerald-300 border border-emerald-500/30",
+
+    "Academic Project":
+      "bg-pink-500/15 text-pink-300 border border-pink-500/30",
+
+    Completed: "bg-green-500/15 text-green-300 border border-green-500/30",
+
+    "In Development":
+      "bg-yellow-500/15 text-yellow-300 border border-yellow-500/30",
+
+    Live: "bg-cyan-500/15 text-cyan-300 border border-cyan-500/30",
+  };
+  const badgeIcons = {
+    "Capstone Thesis": <FaGraduationCap size={14} />,
+    "Group Project": <FiUsers size={14} />,
+    "Personal Project": <FiCode size={14} />,
+    "Client Project": <FiBriefcase size={14} />,
+    Completed: <FiCheckCircle size={14} />,
+    "In Development": <MdConstruction size={14} />,
+  };
   return (
     <motion.div
       variants={cardVariants}
@@ -32,6 +72,23 @@ const ProjectCard = ({ title, description, image, tech, github, live }) => {
         <h3 className="text-2xl font-bold text-gray-100 mb-3 group-hover:text-sky-400 transition-colors duration-300">
           {title}
         </h3>
+        {badges && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {badges.map((badge, index) => (
+              <span
+                key={index}
+                className={`inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-semibold rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-105 ${
+                  badgeColors[badge] ||
+                  "bg-slate-700 text-slate-300 border border-slate-600"
+                }`}
+              >
+                {badgeIcons[badge]}
+                {badge}
+              </span>
+            ))}
+          </div>
+        )}
+
         <p className="text-gray-400 text-sm leading-relaxed mb-6 grow">
           {description}
         </p>

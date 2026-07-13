@@ -1,35 +1,57 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
+import thesisImage from "../assets/Screenshot 2026-07-13 114955.png";
 
 // Mock data based on your requirements
 const projectsData = [
   {
     id: 1,
-    title: "E-Commerce Dashboard",
+    title: "Web-Based Golden Apple Snail (Kuhol) Detection",
     description:
-      "A comprehensive admin dashboard for managing products, orders, and customer data with real-time analytics.",
-    image: "",
-    tech: ["React", "Tailwind CSS", "Recharts", "Node.js"],
+      "A web application that uses YOLOv11 to detect Golden Apple Snail (Kuhol) egg clusters and visualize their locations through an interactive geospatial map.",
+    image: thesisImage,
+    badges: ["Capstone Thesis", "Group Project", "Completed"],
+    tech: [
+      "React",
+      "Flask",
+      "Tailwind CSS",
+      "Python",
+      "Yolov11",
+      "OpenCV",
+      "MySQL",
+      "Google Maps API",
+    ],
     github: "https://github.com/",
     live: "https://example.com/",
   },
   {
     id: 2,
-    title: "TaskFlow Manager",
+    title: "Web-Based Gate Pass Application for CatSU - Security Services",
     description:
-      "A minimalist Kanban-style task management application designed for developer productivity and seamless collaboration.",
+      "A web-based gate pass management system that digitizes requests, approvals, and record keeping for the CatSU Security Services Office.",
     image: "https://placehold.co/600x400/1E293B/38BDF8?text=Project+2",
-    tech: ["React", "Framer Motion", "Firebase"],
+    badges: ["Client Project", "Completed"],
+    tech: [
+      "React",
+      "Laravel",
+      "MySQL",
+      "Tailwind CSS",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "XAMPP",
+    ],
     github: "https://github.com/",
     live: "https://example.com/",
   },
   {
     id: 3,
-    title: "Crypto Tracker",
+    title: "IT Job App",
     description:
-      "A real-time cryptocurrency tracking web application utilizing external APIs to display current market trends and historical charts.",
+      "A full-stack job portal that connects IT students and professionals with internship and employment opportunities through an intuitive application platform.",
     image: "https://placehold.co/600x400/1E293B/38BDF8?text=Project+3",
-    tech: ["React", "Tailwind", "REST API"],
+    badges: ["Personal Project", "In Development"],
+    tech: ["React", "Tailwind CSS", "Flask", "MySQL"],
     github: "https://github.com/",
     live: "https://example.com/",
   },
@@ -87,6 +109,7 @@ const Projects = () => {
               title={project.title}
               description={project.description}
               image={project.image}
+              badges={project.badges}
               tech={project.tech}
               github={project.github}
               live={project.live}
